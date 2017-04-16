@@ -10,7 +10,6 @@
 var i;
 
 function addQR(event) {
-	var body = document.body;
 	i = document.createElement("img");
 	console.log(encodeURIComponent(event.target.smartQRvalue));
 	i.src = "https://qrcode.kaywa.com/img.php?s=6&d=" + encodeURIComponent(event.target.smartQRvalue);
@@ -19,12 +18,11 @@ function addQR(event) {
 	i.style.position = "absolute";
 	i.style.top = "0px";
 	i.alt = "QR Code";
-	body.appendChild(i);
+	document.body.appendChild(i);
 };
 
 function removeQR() {
-	var body = document.body;
-	body.removeChild(i);
+	document.body.removeChild(i);
 };
 
 (function () {
