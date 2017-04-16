@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Smart QR
 // @namespace   http://tampermonkey.net/
-// @description Smart codes
+// @description Detect links to phone numbers and locations and display a QR code on mouseover.
 // @include     http://*
 // @include     https://*
 // @version     0.1
