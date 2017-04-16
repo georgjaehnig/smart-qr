@@ -43,7 +43,6 @@ function addListeners(element, value) {
 			var re = new RegExp('^tel:(.*)$');
 			var matches = link.href.match(re);
 			if (matches) {
-				//link.setAttribute('onmouseover', showQR);
 				addListeners(link, link.href);
 			}
 		}
