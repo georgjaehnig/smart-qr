@@ -17,6 +17,7 @@ function addQR(event) {
 	i.style.height = "100px";
 	i.style.position = "fixed";
 	i.style.top = "0px";
+	i.style.zIndex = "999";
 	i.alt = "QR Code";
 	document.body.appendChild(i);
 };
