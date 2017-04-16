@@ -11,11 +11,11 @@ var i;
 
 function addQR(event) {
 	i = document.createElement("img");
-	console.log(encodeURIComponent(event.target.smartQRvalue));
+	//console.log(encodeURIComponent(event.target.smartQRvalue));
 	i.src = "https://qrcode.kaywa.com/img.php?s=6&d=" + encodeURIComponent(event.target.smartQRvalue);
 	i.style.width = "100px";
 	i.style.height = "100px";
-	i.style.position = "absolute";
+	i.style.position = "fixed";
 	i.style.top = "0px";
 	i.alt = "QR Code";
 	document.body.appendChild(i);
@@ -43,6 +43,13 @@ function removeQR() {
 				link.smartQRvalue = link.href;
 			}
 		}
-		//console.log(link.href);
+		//if (link.attributes.title == "Über Hangouts anrufen") {
+		if (link.dataset) {
+			if (link.dataset.number) {
+				link.addEventListener('mouseover', addQR);
+				link.addEventListener('mouseout', removeQR);
+				link.smartQRvalue = link.dataset.number;
+			}
+		}
 	}
 }());
