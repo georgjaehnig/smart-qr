@@ -7,20 +7,44 @@
 // @version     0.1
 // ==/UserScript==
 
+var i;
+
+function addQR(event) {
+	var body = document.body;
+	i = document.createElement("img");
+	console.log(encodeURIComponent(event.target.smartQRvalue));
+	i.src = "https://qrcode.kaywa.com/img.php?s=6&d=" + encodeURIComponent(event.target.smartQRvalue);
+	i.style.width = "100px";
+	i.style.height = "100px";
+	i.style.position = "absolute";
+	i.style.top = "0px";
+	i.alt = "QR Code";
+	body.appendChild(i);
+};
+
+function removeQR() {
+	var body = document.body;
+	body.removeChild(i);
+};
+
 (function () {
   "use strict";
-	/*
-  var body = document.body;
-  var i = document.createElement("img");
-  i.src = "https://qrcode.kaywa.com/img.php?s=6&d=code";
-  i.style.width = "100px";
-  i.style.height = "100px";
-  i.style.position = "absolute";
-  i.style.top = "0px";
-  i.alt = "QR Code";    
-  body.appendChild(i);
-	*/
+
   //console.log(document.getElementsByName);
+	
   var links = document.getElementsByTagName('a');
-  console.log(links);
+	for(var i=0, len=links.length; i < len; i++){
+		var link = links[i];
+		if (link.href) {
+			var re = new RegExp('^tel:(.*)$');
+			var matches = link.href.match(re);
+			if (matches) {
+				//link.setAttribute('onmouseover', showQR);
+				link.addEventListener('mouseover', addQR);
+				link.addEventListener('mouseout', removeQR);
+				link.smartQRvalue = link.href;
+			}
+		}
+		//console.log(link.href);
+	}
 }());
