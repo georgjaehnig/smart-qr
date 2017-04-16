@@ -25,6 +25,12 @@ function removeQR() {
 	document.body.removeChild(i);
 };
 
+function addListeners(element, value) {
+	element.addEventListener('mouseover', addQR);
+	element.addEventListener('mouseout', removeQR);
+	element.smartQRvalue = value;
+}
+
 (function () {
   "use strict";
 
@@ -38,17 +44,13 @@ function removeQR() {
 			var matches = link.href.match(re);
 			if (matches) {
 				//link.setAttribute('onmouseover', showQR);
-				link.addEventListener('mouseover', addQR);
-				link.addEventListener('mouseout', removeQR);
-				link.smartQRvalue = link.href;
+				addListeners(link, link.href);
 			}
 		}
 		//if (link.attributes.title == "Über Hangouts anrufen") {
 		if (link.dataset) {
 			if (link.dataset.number) {
-				link.addEventListener('mouseover', addQR);
-				link.addEventListener('mouseout', removeQR);
-				link.smartQRvalue = link.dataset.number;
+				addListeners(link, link.dataset.number);
 			}
 		}
 	}
