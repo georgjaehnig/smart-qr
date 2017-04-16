@@ -47,7 +47,6 @@ function addListeners(element, value) {
 				addListeners(link, link.href);
 			}
 		}
-		//if (link.attributes.title == "Über Hangouts anrufen") {
 		if (link.dataset) {
 			if (link.dataset.number) {
 				addListeners(link, link.dataset.number);
