@@ -52,6 +52,13 @@ function handleTextSelect(event) {
       if (matches) {
         addListeners(link, link.href);
       }
+      // Links with href="maps.google.com/?.*q=12,34"
+      var re = new RegExp('maps.google.com.*q=([0-9\.]*),([0-9\.]*)');
+      var matches = link.href.match(re);
+      if (matches) {
+        var value = 'geo:' + matches[1] + ',' + matches[2];
+        addListeners(link, value);
+      }
       // Wikipedia location links.
       var re = new RegExp('tools.wmflabs.org/geohack/geohack\.php.*params=([0-9\.]*)_._([0-9\.]*)');
       var matches = link.href.match(re);
