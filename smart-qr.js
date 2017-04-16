@@ -34,9 +34,6 @@ function addListeners(element, value) {
 
 (function () {
   "use strict";
-
-  //console.log(document.getElementsByName);
-	
   var links = document.getElementsByTagName('a');
 	for(var i=0, len=links.length; i < len; i++){
 		var link = links[i];
