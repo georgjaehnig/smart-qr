@@ -44,6 +44,7 @@
       }
       number = 'tel:' + number;
       addQR(number);  
+      return;
     }
   }
 
