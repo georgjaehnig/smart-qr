@@ -14,6 +14,8 @@
 
 (function () {
 
+  "use strict";
+
   function addQR(value) {
     //console.log(value);
     if (value == '') {
@@ -160,8 +162,6 @@
     parser.href = url;
     return parser;
   }
-
-  "use strict";
 
   var currentURL = parseURL(window.location.href);
 
