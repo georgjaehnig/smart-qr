@@ -80,6 +80,15 @@
 				}
 			}
 		}
+		var links = document.getElementsByTagName('button');
+		for(var i=0, len=links.length; i < len; i++){
+			var link = links[i];
+			if (link.dataset) {
+				if (link.dataset.href) {
+					addListeners(link, link.dataset.href);
+				}
+			}
+		}
 		document.addEventListener('mouseup', handleTextSelect);
 	}
 
