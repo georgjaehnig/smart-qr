@@ -7,23 +7,24 @@
 // @version     0.1
 // ==/UserScript==
 
-var i;
+var i = document.createElement("img");
+i.style.width = "100px";
+i.style.height = "100px";
+i.style.position = "fixed";
+i.style.bottom = "0px";
+i.style.zIndex = "999";
+i.style.visibility = "hidden";
+i.alt = "QR Code";
+document.body.appendChild(i);
 
 function addQR(value) {
-  //console.log(encodeURIComponent(value));
-  i = document.createElement("img");
+  //console.log(value);
   i.src = "https://qrcode.kaywa.com/img.php?s=6&d=" + encodeURIComponent(value);
-  i.style.width = "100px";
-  i.style.height = "100px";
-  i.style.position = "fixed";
-  i.style.top = "0px";
-  i.style.zIndex = "999";
-  i.alt = "QR Code";
-  document.body.appendChild(i);
+  i.style.visibility = "visible";
 };
 
 function removeQR() {
-  document.body.removeChild(i);
+  i.style.visibility = "hidden";
 };
 
 function addListeners(element, value) {
@@ -33,11 +34,18 @@ function addListeners(element, value) {
 }
 
 function handleTextSelect(event) {
-  return;
   var selection = document.getSelection();
   var text = selection.toString();
-  console.log(selection);
-  addListeners(selection.baseNode, text);
+  if (text == '') {
+    removeQR();  
+  }
+  var re = new RegExp('^[^a-zA-Z]*$');
+  var matches = text.match(re);
+  if ((matches) && (matches[0] != '')) {
+    var number = matches[0].replace(/[^0-9\+]/g, '');
+    number = 'tel:' + number;
+    addQR(number);  
+  }
 }
 
 (function () {
@@ -74,13 +82,15 @@ function handleTextSelect(event) {
       }
     }
   }
+
+  document.addEventListener('mouseup', handleTextSelect);
+
   var elements = document.querySelectorAll('a');
-	//console.log(elements);
-	return;
+  //console.log(elements);
+  return;
   for(var i=0, len=elements.length; i < len; i++) {
     var element = elements[i];
-		console.log(element);
+    console.log(element);
   }
-  // document.addEventListener('mouseup', handleTextSelect);
   //document.body.addEventListener('load', function() { console.log('loaded'); });
 }());
