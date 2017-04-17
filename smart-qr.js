@@ -48,44 +48,44 @@
   }
 
   function parseAndAddListeners() {
-    var links = document.getElementsByTagName('a');
-    for(var i=0, len=links.length; i < len; i++){
-      var link = links[i];
-      if (link.href) {
-        // Links with href="tel:..."
+    var elements = document.getElementsByTagName('a');
+    for(var i=0, len=elements.length; i < len; i++){
+      var element = elements[i];
+      if (element.href) {
+        // elements with href="tel:..."
         var re = new RegExp('^tel:(.*)$');
-        var matches = link.href.match(re);
+        var matches = element.href.match(re);
         if (matches) {
-          addListeners(link, link.href);
+          addListeners(element, element.href);
         }
-        // Links with href="maps.google.com/?.*q=12,34"
+        // elements with href="maps.google.com/?.*q=12,34"
         var re = new RegExp('maps.google.com.*q=([0-9\.]*),([0-9\.]*)');
-        var matches = link.href.match(re);
+        var matches = element.href.match(re);
         if (matches) {
           var value = 'geo:' + matches[1] + ',' + matches[2];
-          addListeners(link, value);
+          addListeners(element, value);
         }
-        // Wikipedia location links.
+        // Wikipedia location elements.
         var re = new RegExp('tools.wmflabs.org/geohack/geohack\.php.*params=([0-9\.]*)_._([0-9\.]*)');
-        var matches = link.href.match(re);
+        var matches = element.href.match(re);
         if (matches) {
           var value = 'geo:' + matches[1] + ',' + matches[2];
-          addListeners(link, value);
+          addListeners(element, value);
         }
       }
-      // Links with data-number.
-      if (link.dataset) {
-        if (link.dataset.number) {
-          addListeners(link, link.dataset.number);
+      // elements with data-number.
+      if (element.dataset) {
+        if (element.dataset.number) {
+          addListeners(element, element.dataset.number);
         }
       }
     }
-    var links = document.getElementsByTagName('button');
-    for(var i=0, len=links.length; i < len; i++){
-      var link = links[i];
-      if (link.dataset) {
-        if (link.dataset.href) {
-          addListeners(link, link.dataset.href);
+    var elements = document.getElementsByTagName('button');
+    for(var i=0, len=elements.length; i < len; i++){
+      var element = elements[i];
+      if (element.dataset) {
+        if (element.dataset.href) {
+          addListeners(element, element.dataset.href);
         }
       }
     }
