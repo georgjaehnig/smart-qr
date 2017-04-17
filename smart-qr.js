@@ -85,12 +85,5 @@ function handleTextSelect(event) {
 
   document.addEventListener('mouseup', handleTextSelect);
 
-  var elements = document.querySelectorAll('a');
-  //console.log(elements);
-  return;
-  for(var i=0, len=elements.length; i < len; i++) {
-    var element = elements[i];
-    console.log(element);
-  }
   //document.body.addEventListener('load', function() { console.log('loaded'); });
 }());
