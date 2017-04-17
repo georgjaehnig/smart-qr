@@ -80,6 +80,7 @@
         }
       }
     }
+    // Google maps, info sidebar, phone numbers
     var elements = document.getElementsByTagName('button');
     for(var i=0, len=elements.length; i < len; i++){
       var element = elements[i];
