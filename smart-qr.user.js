@@ -13,7 +13,7 @@
   function addQR(value) {
     //console.log(value);
     if (value == '') {
-      return;  
+      return;
     }
     i.src = 'https://chart.apis.google.com/chart?cht=qr&chs=100x100&chld=L|0&chl=' + encodeURIComponent(value);
     i.style.visibility = "visible";
@@ -33,17 +33,17 @@
     var selection = document.getSelection();
     var text = selection.toString();
     if (text == '') {
-      removeQR();  
+      removeQR();
     }
     var re = new RegExp('^[^a-zA-Z]*$');
     var matches = text.match(re);
     if (matches) {
       var number = matches[0].replace(/[^0-9\+]/g, '');
       if (number == '') {
-        return;  
+        return;
       }
       number = 'tel:' + number;
-      addQR(number);  
+      addQR(number);
       return;
     }
   }
@@ -108,7 +108,6 @@
           var re = new RegExp('markers=([0-9\.]+)%2C([0-9\.]+)');
           var matches = element.src.match(re);
           if (matches) {
-        console.log(element);
             var value = 'geo:' + matches[1] + ',' + matches[2];
             addListeners(element, value);
           }
