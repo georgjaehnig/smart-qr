@@ -21,12 +21,12 @@
     if (value == '') {
       return;
     }
-    i.src = 'https://chart.apis.google.com/chart?cht=qr&chs=100x100&chld=L|0&chl=' + encodeURIComponent(value);
-    i.style.visibility = "visible";
+    img.src = 'https://chart.apis.google.com/chart?cht=qr&chs=100x100&chld=L|0&chl=' + encodeURIComponent(value);
+    img.style.visibility = "visible";
   };
 
   function removeQR() {
-    i.style.visibility = "hidden";
+    img.style.visibility = "hidden";
   };
 
   function addListeners(element, value) {
@@ -154,7 +154,7 @@
   }
 
   function manualTriggerWithDblClick() {
-  	document.body.appendChild(i);
+    document.body.appendChild(img);
     window.addEventListener('dblclick', parseAndAddListeners, true);
   }
 
@@ -167,15 +167,15 @@
   var currentURL = parseURL(window.location.href);
 
   // Create code and add to body.
-  var i = document.createElement("img");
-  i.style.width = "100px";
-  i.style.height = "100px";
-  i.style.position = "fixed";
-  i.style.left = "10px";
-  i.style.bottom = "30px";
-  i.style.zIndex = "999";
-  i.style.visibility = "hidden";
-  i.alt = "QR Code";
+  var img = document.createElement("img");
+  img.style.width = "100px";
+  img.style.height = "100px";
+  img.style.position = "fixed";
+  img.style.left = "10px";
+  img.style.bottom = "30px";
+  img.style.zIndex = "999";
+  img.style.visibility = "hidden";
+  img.alt = "QR Code";
 
   manualTriggerWithDblClick();
 
