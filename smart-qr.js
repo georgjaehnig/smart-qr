@@ -83,6 +83,10 @@
 		document.addEventListener('mouseup', handleTextSelect);
 	}
 
+	function manualTriggerWithDblClick() {
+		window.addEventListener('dblclick', parseAndAddListeners, true);
+	}
+
   "use strict";
 
 	// Create code and add to body.
@@ -98,6 +102,7 @@
 	document.body.appendChild(i);
 
 	parseAndAddListeners();
+	manualTriggerWithDblClick();
 
 }());
 
