@@ -2,11 +2,15 @@
 // @name        Smart QR
 // @namespace   http://tampermonkey.net/
 // @description Detect links to phone numbers and locations and displays their value as a QR code on mouseover.
+// @copyright   2017, Georg Jähnig
 // @include     http://*
 // @include     https://*
 // @version     0.1
 // ==/UserScript==
-
+//
+// ==OpenUserJS==
+// @author jorges
+// ==/OpenUserJS==
 
 (function () {
 
