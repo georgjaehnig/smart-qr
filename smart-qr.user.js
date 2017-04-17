@@ -118,7 +118,8 @@
       // elements with data-number.
       if (element.dataset) {
         if (element.dataset.number) {
-          addListeners(element, element.dataset.number);
+          var value = 'tel:' + element.dataset.number;
+          addListeners(element, value);
         }
       }
     }
