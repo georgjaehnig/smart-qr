@@ -90,6 +90,22 @@
         }
       }
     }
+    // Facebook events, location.
+    var element = document.querySelector('li._3xd0  a[ajaxify]');
+    console.log(element);
+    if (element) {
+      var path = element.getAttribute('ajaxify')
+      var re = new RegExp('latitude=([0-9\.]*).*longitude=([0-9\.]*)');
+      var matches = path.match(re);
+      if (matches) {
+        var value = 'geo:' + matches[1] + ',' + matches[2];
+        // Add listener to wrapping <li> (the whole address).
+        var holder = document.querySelector('li._3xd0');
+        addListeners(holder, value);
+      }
+    }
+
+    // Text selections.
     document.addEventListener('mouseup', handleTextSelect);
   }
 
