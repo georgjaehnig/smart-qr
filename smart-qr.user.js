@@ -149,8 +149,8 @@
   i.style.width = "100px";
   i.style.height = "100px";
   i.style.position = "fixed";
-  i.style.margin = "20px";
-  i.style.bottom = "0";
+  i.style.left = "10px";
+  i.style.bottom = "30px";
   i.style.zIndex = "999";
   i.style.visibility = "hidden";
   i.alt = "QR Code";
