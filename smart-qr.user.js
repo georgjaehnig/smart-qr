@@ -76,6 +76,13 @@
           var value = 'geo:' + matches[1] + ',' + matches[2];
           addListeners(element, value);
         }
+        // elements with href="@12.34,56.78"
+        var re = new RegExp('google.*@([0-9]\+\.[0-9]\+),([0-9]\+\.[0-9]\+)');
+        var matches = element.href.match(re);
+        if (matches) {
+          var value = 'geo:' + matches[1] + ',' + matches[2];
+          addListeners(element, value);
+        }
         // Wikipedia location elements.
         if (currentURL.hostname.match(/wikipedia\.org/)) {
           var re = new RegExp('tools.wmflabs.org/geohack/geohack\.php.*params=([0-9\.]*)_._([0-9\.]*)');
