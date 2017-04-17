@@ -15,7 +15,7 @@
     if (value == '') {
       return;  
     }
-    i.src = "https://qrcode.kaywa.com/img.php?s=6&d=" + encodeURIComponent(value);
+    i.src = 'http://chart.apis.google.com/chart?cht=qr&chs=100x100&chld=L|0&chl=' + encodeURIComponent(value);
     i.style.visibility = "visible";
   };
 
