@@ -37,7 +37,7 @@
     }
     var re = new RegExp('^[^a-zA-Z]*$');
     var matches = text.match(re);
-    if ((matches) && (matches[0] != '')) {
+    if (matches) {
       var number = matches[0].replace(/[^0-9\+]/g, '');
       if (number == '') {
         return;  
