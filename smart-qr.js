@@ -72,6 +72,20 @@
           var value = 'geo:' + matches[1] + ',' + matches[2];
           addListeners(element, value);
         }
+        // Openstreetmap coordinate link.
+        var re = new RegExp('/#map=[0-9]+/([0-9\.]+)/([0-9\.]+)');
+        var matches = element.href.match(re);
+        if (matches) {
+          var value = 'geo:' + matches[1] + ',' + matches[2];
+          addListeners(element, value);
+        }
+        // Any "geo:" link.
+        var re = new RegExp('geo:([0-9\.]+),([0-9\.]+)');
+        var matches = element.href.match(re);
+        if (matches) {
+          var value = 'geo:' + matches[1] + ',' + matches[2];
+          addListeners(element, value);
+        }
       }
       // elements with data-number.
       if (element.dataset) {
