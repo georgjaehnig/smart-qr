@@ -154,6 +154,7 @@
   }
 
   function manualTriggerWithDblClick() {
+  	document.body.appendChild(i);
     window.addEventListener('dblclick', parseAndAddListeners, true);
   }
 
@@ -176,9 +177,6 @@
   i.style.visibility = "hidden";
   i.alt = "QR Code";
 
-  document.body.appendChild(i);
-
-  parseAndAddListeners();
   manualTriggerWithDblClick();
 
 }());
