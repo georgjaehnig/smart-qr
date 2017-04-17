@@ -10,7 +10,7 @@
 var i;
 
 function addQR(value) {
-  console.log(encodeURIComponent(value));
+  //console.log(encodeURIComponent(value));
   i = document.createElement("img");
   i.src = "https://qrcode.kaywa.com/img.php?s=6&d=" + encodeURIComponent(value);
   i.style.width = "100px";
@@ -74,5 +74,13 @@ function handleTextSelect(event) {
       }
     }
   }
+  var elements = document.querySelectorAll('a');
+	//console.log(elements);
+	return;
+  for(var i=0, len=elements.length; i < len; i++) {
+    var element = elements[i];
+		console.log(element);
+  }
   // document.addEventListener('mouseup', handleTextSelect);
+  //document.body.addEventListener('load', function() { console.log('loaded'); });
 }());
