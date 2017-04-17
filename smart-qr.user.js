@@ -15,7 +15,7 @@
     if (value == '') {
       return;  
     }
-    i.src = 'http://chart.apis.google.com/chart?cht=qr&chs=100x100&chld=L|0&chl=' + encodeURIComponent(value);
+    i.src = 'https://chart.apis.google.com/chart?cht=qr&chs=100x100&chld=H|0&chl=' + encodeURIComponent(value);
     i.style.visibility = "visible";
   };
 
