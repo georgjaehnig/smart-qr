@@ -11,7 +11,7 @@
 (function () {
 
   function addQR(value) {
-    console.log(value);
+    //console.log(value);
     if (value == '') {
       return;  
     }
