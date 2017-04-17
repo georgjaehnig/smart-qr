@@ -12,6 +12,9 @@
 
 	function addQR(value) {
 		console.log(value);
+		if (value == '') {
+			return;	
+		}
 		i.src = "https://qrcode.kaywa.com/img.php?s=6&d=" + encodeURIComponent(value);
 		i.style.visibility = "visible";
 	};
@@ -36,6 +39,9 @@
 		var matches = text.match(re);
 		if ((matches) && (matches[0] != '')) {
 			var number = matches[0].replace(/[^0-9\+]/g, '');
+			if (number == '') {
+				return;	
+			}
 			number = 'tel:' + number;
 			addQR(number);  
 		}
