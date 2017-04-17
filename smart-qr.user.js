@@ -35,6 +35,16 @@
     if (text == '') {
       removeQR();
     }
+    // Geo coordinates.
+    // Match selections like "12.34 , 56.789".
+    var re = new RegExp('^\\s*([0-9]\+\.[0-9]\+)\\s*(,\|;)\\s*([0-9]\+\.[0-9]\+)\\s*$');
+    var matches = text.match(re);
+    if (matches) {
+			var value = 'geo:' + matches[1] + ',' + matches[3];
+      addQR(value);
+      return;
+    }
+    // Phone number.
     var re = new RegExp('^[^a-zA-Z]*$');
     var matches = text.match(re);
     if (matches) {
