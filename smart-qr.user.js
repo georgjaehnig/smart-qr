@@ -31,7 +31,7 @@
 
   function addListeners(element, value) {
     element.addEventListener('mouseover', function() { addQR(value); } );
-    element.addEventListener('mouseout', function() { removeQR(); });
+    //element.addEventListener('mouseout', function() { removeQR(); });
   }
 
   function handleTextSelect(event) {
