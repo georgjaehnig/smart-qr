@@ -158,6 +158,15 @@
     window.addEventListener('dblclick', parseAndAddListeners, true);
   }
 
+  function codeForCurrentPage() {
+    window.addEventListener('click', function (evt) {
+      if (evt.detail === 3) {
+        var value = window.location.href;
+        addQR(value);
+      }
+    });
+  }
+
   function parseURL(url) {
     var parser = document.createElement('a');
     parser.href = url;
@@ -180,6 +189,7 @@
   img.addEventListener('mouseover', removeQR, true);
 
   manualTriggerWithDblClick();
+	codeForCurrentPage();
 
 }());
 
