@@ -189,7 +189,7 @@
   img.addEventListener('mouseover', removeQR, true);
 
   manualTriggerWithDblClick();
-	codeForCurrentPage();
+  codeForCurrentPage();
 
 }());
 
