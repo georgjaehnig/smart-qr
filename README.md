@@ -39,13 +39,15 @@ When visiting any web page:
    - Hover the mouse over:
      - a link to a phone number, like`<a href="tel:+123456789">call us</a>`
      - a [link to Google Maps with coordinates](https://www.google.com/maps?q=52.51627,13.37705)
+     - on Facebook event page: map of the location 
+     - on Wikipedia: link of the location (upper right corner)
    - select a text containing
      - geo coordinates, like 52.51627,13.37705
      - a sequence of numbers, like 123456789
 3. Smart QR will display a QR code in the lower left corner containing the phone number or the location. When scanning them with your phone, you will be directly offered to make a call or to open your favourite map app with this location.
 4. To hide the code, hover the mouse over the displayed code. It will disappear immediately.
 
-## URL of current page.
+## URL of current page
 
 1. ***Triple click*** somewhere on the page.
 2. To hide the code, hover the mouse over the displayed code. It will disappear immediately.
