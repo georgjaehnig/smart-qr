@@ -13,7 +13,7 @@ Then this userscript might be for you.
 <a href="img/google-location.png"><img src="img/google-location.png" width="300"></a>
 *Hovering over a map in a Google result.*
 
-<a href="img/google-phone.png"><img src="img/google-location.png" width="300"></a>
+<a href="img/google-phone.png"><img src="img/google-phone.png" width="300"></a>
 *Hovering over a phone number in a Google result.*
 
 <a href="img/facebook-event-location.png"><img src="img/facebook-event-location.png" width="300"></a>
