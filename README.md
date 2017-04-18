@@ -37,7 +37,7 @@ When visiting any web page:
 1. ***Double click*** somewhere on the page to get the script started. (This is important, otherwise nothing will happen.)
 2. Now you can either
    - Hover the mouse over:
-     - a [link to a phone number](tel:+123456789)
+     - a [link to a phone number](tel:+123456789) <a href="tel:+234">sdf</a>
      - a [link to Google Maps with coordinates](https://www.google.com/maps?q=52.51627,13.37705)
    - select a text containing
      - geo coordinates, like 52.51627,13.37705
