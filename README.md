@@ -3,8 +3,8 @@
 You want to 
 
 - call the phone number on a web page with your mobile phone? 
-- add the location of Facebook event to you smartphone map app?
-- add the phone number someone sent you to your smartphone contacts?
+- add the location of a Facebook event to your smartphone map app?
+- add the phone number someone sent you in Gmail to your smartphone contacts?
 
 Then this userscript might be for you.
 
