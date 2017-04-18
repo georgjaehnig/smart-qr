@@ -22,8 +22,25 @@ To read the QR codes displayed by Smart QR, on your smartphone you need a QR rea
 
 ## Install
 
-Once you have one a userscript browser extension installed in your browser, you can install Smart QR. Go to
+Once you have one of the userscript browser extensions installed in your browser, you can install Smart QR. Go to
 
 https://openuserjs.org/scripts/jorges/Smart_QR
 
 and click ***Install***.
+
+# Usage
+
+When visiting any web page:
+
+## Phone numbers and locations
+
+1. ***Double click*** somewhere on the page to get the script started. (This is important, otherwise nothing will happen.)
+2. Now you can either
+   - Hover the mouse over:
+     - a [link to a phone number](tel:+123456789)
+     - a [link to Google Maps with coordinates](https://www.google.com/maps?q=52.51627,13.37705)
+   - select a text containing
+     - geo coordinates, like 52.51627,13.37705
+     - a sequence of numbers, like 123456789
+3. Smart QR will display a QR code in the lower left corner containing the phone number or the location. When scanning them with your phone, you will be directly offered to make a call or to open your favourite map app with this location.
+
