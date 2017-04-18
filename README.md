@@ -11,19 +11,19 @@ Then this userscript might be for you.
 ## Screenshots
 
 <a href="img/google-location.png"><img src="img/google-location.png" width="300"></a>
-*Hovering over a map in a Google result*
+*Hovering over a map in a Google result.*
 
 <a href="img/google-phone.png"><img src="img/google-location.png" width="300"></a>
-*Hovering over a phone number in a Google result*
+*Hovering over a phone number in a Google result.*
 
 <a href="img/facebook-event-location.png"><img src="img/facebook-event-location.png" width="300"></a>
-*Hovering over the location map of a Facebook event*
+*Hovering over the location map of a Facebook event.*
 
 <a href="img/selected-phone.png"><img src="img/selected-phone.png" width="300"></a>
-*Selecting a phone number in the webpage text*
+*Selecting a phone number in the webpage text.*
 
 <a href="img/selected-location.png"><img src="img/selected-location.png" width="300"></a>
-*Selecting a geocoordinates in the webpage text*
+*Selecting geocoordinates in the webpage text.*
 
 ## Prerequisites
 
