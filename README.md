@@ -10,7 +10,7 @@ Then this userscript might be for you.
 
 ## Screenshots
 
-Always double click somewhere on the page to get the script started.
+First, always double click somewhere on the page to get the script started.
 
 <a href="img/google-location.png"><img src="img/google-location.png" width="300"></a>
 *Hovering over a map in a Google result.*
