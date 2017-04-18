@@ -177,6 +177,8 @@
   img.style.visibility = "hidden";
   img.alt = "QR Code";
 
+  img.addEventListener('mouseover', removeQR, true);
+
   manualTriggerWithDblClick();
 
 }());
