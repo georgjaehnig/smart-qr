@@ -8,7 +8,7 @@ You want to
 
 Then this userscript might be for you.
 
-## Preequisites
+## Prerequisites
 
 Userscripts are added to your browser and then run on webpages you are visiting. Depending on your browser, you first need a plugin for userscripts, for instance:
 
