@@ -43,4 +43,9 @@ When visiting any web page:
      - geo coordinates, like 52.51627,13.37705
      - a sequence of numbers, like 123456789
 3. Smart QR will display a QR code in the lower left corner containing the phone number or the location. When scanning them with your phone, you will be directly offered to make a call or to open your favourite map app with this location.
+4. To hide the code, hover the mouse over the displayed code. It will disappear immediately.
 
+## URL of current page.
+
+1. ***Triple click*** somewhere on the page.
+2. To hide the code, hover the mouse over the displayed code. It will disappear immediately.
