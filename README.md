@@ -8,6 +8,14 @@ You want to
 
 Then this userscript might be for you.
 
+## Screenshots
+
+![](img/google-location.png | width=100)
+![](img/google-phone.png | width=100)
+![](img/facebook-event-location.png | width=100)
+![](img/gmail-phone.png | width=100)
+![](img/selected-location.png | width=100)
+
 ## Prerequisites
 
 Userscripts are added to your browser and then run on webpages you are visiting. Depending on your browser, you first need a plugin for userscripts, for instance:
