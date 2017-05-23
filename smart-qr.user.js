@@ -77,6 +77,7 @@
         addListeners(element, value);
       }
     }
+    // Links.
     var elements = document.getElementsByTagName('a');
     for(var i=0, len=elements.length; i < len; i++){
       var element = elements[i];
@@ -150,7 +151,7 @@
         }
       }
     }
-    // Google maps, info sidebar, phone numbers
+    // Google maps, info sidebar, phone numbers.
     if (currentURL.hostname.match(/google/)) {
       var elements = document.getElementsByTagName('button');
       for(var i=0, len=elements.length; i < len; i++){
