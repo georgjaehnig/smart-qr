@@ -65,6 +65,18 @@
   }
 
   function parseAndAddListeners() {
+
+    // <span class="phone">0123456789</span>.
+    var elements = document.getElementsByTagName('span');
+    for(var i=0, len=elements.length; i < len; i++){
+      var element = elements[i];
+      if (element.className.match(/phone/)) {
+        var number = element.innerHTML;
+        number = number.replace(/[^0-9\+]/g, '');
+        var value = 'tel:' + number;
+        addListeners(element, value);
+      }
+    }
     var elements = document.getElementsByTagName('a');
     for(var i=0, len=elements.length; i < len; i++){
       var element = elements[i];
