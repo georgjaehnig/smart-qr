@@ -147,6 +147,14 @@
           var value = 'tel:' + element.dataset.number;
           addListeners(element, value);
         }
+        // Elements with data-location.
+        if (element.dataset.location) {
+          var coordinates = parseGeoString(element.dataset.location);
+          if (coordinates) {
+            var value = 'geo:' + coordinates.lat + ',' + coordinates.lon;
+            addListeners(element, value);
+          }
+        }
       }
     }
     // Facebook events, location.
