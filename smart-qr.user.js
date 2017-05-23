@@ -35,6 +35,20 @@
     //element.addEventListener('mouseout', function() { removeQR(); });
   }
 
+  // Match strings like "12.34 , 56.789".
+  function parseGeoString(str) {
+    var re = new RegExp('^\\s*([0-9]\+\.[0-9]\+)\\s*(,\|;)\\s*([0-9]\+\.[0-9]\+)\\s*$');
+    var matches = str.match(re);
+    if (matches) {
+      var coordinates = {};
+      coordinates.lat = matches[1];
+      coordinates.lon = matches[3];
+      return coordinates;
+    }
+    return false;
+  }
+
+
   function handleTextSelect(event) {
     var selection = document.getSelection();
     var text = selection.toString();
@@ -42,11 +56,9 @@
       removeQR();
     }
     // Geo coordinates.
-    // Match selections like "12.34 , 56.789".
-    var re = new RegExp('^\\s*([0-9]\+\.[0-9]\+)\\s*(,\|;)\\s*([0-9]\+\.[0-9]\+)\\s*$');
-    var matches = text.match(re);
-    if (matches) {
-      var value = 'geo:' + matches[1] + ',' + matches[3];
+    var coordinates = parseGeoString(text);
+    if (coordinates) {
+      var value = 'geo:' + coordinates.lat + ',' + coordinates.lon;
       addQR(value);
       return;
     }
